@@ -1,0 +1,24 @@
+\doxysection{main.\+cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{main.cpp@{main.cpp}}
+
+
+Entry point\+: reading multiple datasets, sorting them, and saving the results.  
+
+
+{\ttfamily \#include "{}io.\+h"{}}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int {\bfseries main} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Iterates through CSV files with different array sizes specified in the {\ttfamily sizes} array. For each file\+:
+\begin{DoxyEnumerate}
+\item Calls parser\+CSV to load data into a vector of \doxylink{class_flower}{Flower} objects.
+\item Calls save\+Res to sort the data, save the result, and measure execution time. 
+\end{DoxyEnumerate}

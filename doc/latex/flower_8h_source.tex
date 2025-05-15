@@ -1,0 +1,49 @@
+\doxysection{flower.\+h}
+\hypertarget{flower_8h_source}{}\label{flower_8h_source}\mbox{\hyperlink{flower_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#ifndef\ FLOWER\_H}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#define\ FLOWER\_H}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }Flower\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ Flower()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00019\ \ \ \ \ Flower(\textcolor{keywordtype}{string}\ name,\ \textcolor{keywordtype}{string}\ color,\ \textcolor{keywordtype}{string}\ smell,\ vector<string>\ regions);}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_flower_a23707c31a5bf6fdec5182fd60bc8767f}{Flower}}(\textcolor{keyword}{const}\ Flower\&\ other)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_flower_a6c00b055a86a99c194fa9d4a37d52008}{Flower}}(Flower\&\&\ other)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_flower_ac94d2865acdb10a9396b27f9d4c7eb82}{\string~Flower}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{string}\ GetName()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ name\_;\ \}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{string}\ GetColor()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ color\_;\ \}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{string}\ GetSmell()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ smell\_;\ \}}
+\DoxyCodeLine{00033\ \ \ \ \ vector<string>\ GetRegions()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ regions\_;\ \}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ SetName(\textcolor{keywordtype}{string}\ name)\ \{\ name\_\ =\ name;\ \}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ SetColor(\textcolor{keywordtype}{string}\ color)\ \{\ color\_\ =\ color;\ \}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ SetSmell(\textcolor{keywordtype}{string}\ smell)\ \{\ smell\_\ =\ smell;\ \}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ SetRegions(vector<string>\ regions)\ \{\ regions\_\ =\ regions;\ \}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_flower_ab4e38c81cac204163580ebab3b89b97b}{operator>}}(\textcolor{keyword}{const}\ Flower\&\ other)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_flower_af845d4d5700142ebeb670cc6bc116ce1}{operator<}}(\textcolor{keyword}{const}\ Flower\&\ other)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_flower_a05231051adbf69f1691431cea4a343ce}{operator>=}}(\textcolor{keyword}{const}\ Flower\&\ other)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_flower_ab6de0bb581e0092c5ef55018e50a060b}{operator<=}}(\textcolor{keyword}{const}\ Flower\&\ other)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00051\ \ \ \ \ Flower\&\ \mbox{\hyperlink{class_flower_abd369d748d0e66c7e466e60fbbd6d9c2}{operator=}}(\textcolor{keyword}{const}\ Flower\&\ other);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_flower_a4ebbfd69e4d3022d85638f049dc167df}{EqFlowers}}(\textcolor{keyword}{const}\ Flower\&\ other)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{string}\ name\_;\ \ \ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{string}\ color\_;\ \ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{string}\ smell\_;\ \ }
+\DoxyCodeLine{00066\ \ \ \ \ vector<string>\ regions\_;\ \ }
+\DoxyCodeLine{00067\ \};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

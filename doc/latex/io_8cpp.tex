@@ -1,0 +1,110 @@
+\doxysection{io.\+cpp File Reference}
+\hypertarget{io_8cpp}{}\label{io_8cpp}\index{io.cpp@{io.cpp}}
+
+
+Implementation of functions for parsing and exporting the sorted array to a file.  
+
+
+{\ttfamily \#include "{}io.\+h"{}}\newline
+{\ttfamily \#include "{}sorts.\+h"{}}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \mbox{\hyperlink{class_flower}{Flower}} $>$ \mbox{\hyperlink{io_8cpp_a290bc2a300c281d6ff0a846b014af8b0}{parser\+CSV}} (string filename)
+\begin{DoxyCompactList}\small\item\em Reads a CSV file and returns a vector of \doxylink{class_flower}{Flower} objects. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{io_8cpp_a3ef0f516e9350331943a8a85181912b8}{save\+Res}} (const std\+::vector$<$ \mbox{\hyperlink{class_flower}{Flower}} $>$ \&source, long size)
+\begin{DoxyCompactList}\small\item\em Saves a sorted array of flowers to a CSV file and measures the time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{io_8cpp_a290bc2a300c281d6ff0a846b014af8b0}\index{io.cpp@{io.cpp}!parserCSV@{parserCSV}}
+\index{parserCSV@{parserCSV}!io.cpp@{io.cpp}}
+\doxysubsubsection{\texorpdfstring{parserCSV()}{parserCSV()}}
+{\footnotesize\ttfamily \label{io_8cpp_a290bc2a300c281d6ff0a846b014af8b0} 
+vector$<$ \mbox{\hyperlink{class_flower}{Flower}} $>$ parser\+CSV (\begin{DoxyParamCaption}\item[{string}]{filename}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Path to the input CSV file. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em runtime\+\_\+error} & if the file cannot be opened. \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+Vector of \doxylink{class_flower}{Flower} objects loaded from the file.
+\end{DoxyReturn}
+The function opens the given CSV file and discards the first line (assumed to be a header). ~\newline
+ Each subsequent line must contain exactly four comma-\/separated fields\+:
+\begin{DoxyEnumerate}
+\item name ~\newline
+
+\item color ~\newline
+
+\item smell ~\newline
+
+\item regions — a list of one or more region names enclosed in square brackets, e.\+g. {\ttfamily \mbox{[}Region1,Region2,…\mbox{]}} ~\newline
+
+\end{DoxyEnumerate}
+
+Internally, the parser locates the first three commas to extract the name, color and smell fields. ~\newline
+ It then strips the surrounding brackets from the remaining substring and splits it on commas to obtain each region. ~\newline
+ A {\ttfamily \doxylink{class_flower}{Flower}} is constructed with these values and appended to the result vector. ~\newline
+ If the file contains no data lines (only a header or is empty), an empty vector is returned. \Hypertarget{io_8cpp_a3ef0f516e9350331943a8a85181912b8}\index{io.cpp@{io.cpp}!saveRes@{saveRes}}
+\index{saveRes@{saveRes}!io.cpp@{io.cpp}}
+\doxysubsubsection{\texorpdfstring{saveRes()}{saveRes()}}
+{\footnotesize\ttfamily \label{io_8cpp_a3ef0f516e9350331943a8a85181912b8} 
+void save\+Res (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{class_flower}{Flower}} $>$ \&}]{source}{, }\item[{long}]{size}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & Constant reference to the vector of \doxylink{class_flower}{Flower} objects. \\
+\hline
+{\em size} & Size of the array. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em runtime\+\_\+error} & In case of a file write error.\\
+\hline
+\end{DoxyExceptions}
+The function performs four sorts on copies of the input data\+:
+\begin{DoxyItemize}
+\item Selection sort
+\item Heap sort
+\item Quick sort
+\item std\+::sort (introsort)
+\end{DoxyItemize}
+
+It first creates four separate vectors (tmp1–tmp4) from {\ttfamily source} so that each algorithm works on the same initial dataset. It then builds a base filepath using the provided {\ttfamily size}, and appends algorithm-\/specific suffixes\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sorted\_data/<size>\_selectSort.txt}
+\DoxyCodeLine{sorted\_data/<size>\_heapSort.txt}
+\DoxyCodeLine{sorted\_data/<size>\_quickSort.txt}
+\DoxyCodeLine{sorted\_data/<size>\_sort.txt}
+
+\end{DoxyCode}
+
+
+A master timing log ("{}info\+\_\+time.\+txt"{}) is opened in append mode. For each algorithm\+:
+\begin{DoxyEnumerate}
+\item The function records the start time using std\+::chrono\+::high\+\_\+resolution\+\_\+clock.
+\item It invokes the sort (select\+Sort, heap\+Sort, quick\+Sort, or std\+::sort).
+\item It records the end time and computes the elapsed duration in seconds.
+\item It writes a labeled line with the algorithm number and elapsed time to the timing log.
+\item It opens the corresponding output file and writes each \doxylink{class_flower}{Flower} in sorted order, one per line, with fields separated by spaces\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Name\ Color\ Smell\ Region1\ Region2\ …}
+
+\end{DoxyCode}
+
+\item Closes the file before proceeding to the next algorithm.
+\end{DoxyEnumerate}
+
+If opening or writing to any of the files fails, the function throws a std\+::runtime\+\_\+error indicating which path could not be accessed. 

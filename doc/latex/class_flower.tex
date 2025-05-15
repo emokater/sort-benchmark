@@ -1,0 +1,118 @@
+\doxysection{Flower Class Reference}
+\hypertarget{class_flower}{}\label{class_flower}\index{Flower@{Flower}}
+
+
+The \doxylink{class_flower}{Flower} class contains information about a flower (name, color, scent intensity, and habitat regions).  
+
+
+
+
+{\ttfamily \#include $<$flower.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_flower_a4ebbfd69e4d3022d85638f049dc167df}{Eq\+Flowers}} (const \mbox{\hyperlink{class_flower}{Flower}} \&other) const
+\begin{DoxyCompactList}\small\item\em Compares the current object with another based on key fields. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Constructors}\par
+{\em Default constructor. }\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_flower_a9c0dd5c8d8ecf103bea88e8a821c6817}\label{class_flower_a9c0dd5c8d8ecf103bea88e8a821c6817} 
+{\bfseries Flower} (string name, string color, string smell, vector$<$ string $>$ regions)
+\begin{DoxyCompactList}\small\item\em Primary constructor of the \doxylink{class_flower}{Flower} class. \end{DoxyCompactList}\item 
+\Hypertarget{class_flower_a23707c31a5bf6fdec5182fd60bc8767f}\label{class_flower_a23707c31a5bf6fdec5182fd60bc8767f} 
+{\bfseries Flower} (const \mbox{\hyperlink{class_flower}{Flower}} \&other)=default
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\Hypertarget{class_flower_a6c00b055a86a99c194fa9d4a37d52008}\label{class_flower_a6c00b055a86a99c194fa9d4a37d52008} 
+{\bfseries Flower} (\mbox{\hyperlink{class_flower}{Flower}} \&\&other)=default
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\Hypertarget{class_flower_ac94d2865acdb10a9396b27f9d4c7eb82}\label{class_flower_ac94d2865acdb10a9396b27f9d4c7eb82} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Flower} ()=default
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Getters}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_flower_a2cfe4ec15576561edc528469c3c3481a}\label{class_flower_a2cfe4ec15576561edc528469c3c3481a} 
+string {\bfseries Get\+Name} () const
+\item 
+\Hypertarget{class_flower_a7551f29cbb17b53b93d142e8ef33870a}\label{class_flower_a7551f29cbb17b53b93d142e8ef33870a} 
+string {\bfseries Get\+Color} () const
+\item 
+\Hypertarget{class_flower_ad464f6f4e5ccca1a54c130c618b3403d}\label{class_flower_ad464f6f4e5ccca1a54c130c618b3403d} 
+string {\bfseries Get\+Smell} () const
+\item 
+\Hypertarget{class_flower_a8dd68ef0845e45af42a09631fa4e0825}\label{class_flower_a8dd68ef0845e45af42a09631fa4e0825} 
+vector$<$ string $>$ {\bfseries Get\+Regions} () const
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Setters}\par
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_flower_a07977fe10179a7e97b5f1b48564192d7}\label{class_flower_a07977fe10179a7e97b5f1b48564192d7} 
+void {\bfseries Set\+Name} (string name)
+\item 
+\Hypertarget{class_flower_a32919ea900e93d12f136918da863324c}\label{class_flower_a32919ea900e93d12f136918da863324c} 
+void {\bfseries Set\+Color} (string color)
+\item 
+\Hypertarget{class_flower_af75c8388628f42ecee51a25316025662}\label{class_flower_af75c8388628f42ecee51a25316025662} 
+void {\bfseries Set\+Smell} (string smell)
+\item 
+\Hypertarget{class_flower_a5709b8bbae3afaed6ea0fa004423258d}\label{class_flower_a5709b8bbae3afaed6ea0fa004423258d} 
+void {\bfseries Set\+Regions} (vector$<$ string $>$ regions)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Operator Overloading}\par
+{\em Comparison based on key fields (name, color, smell). }\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_flower_ab4e38c81cac204163580ebab3b89b97b}\label{class_flower_ab4e38c81cac204163580ebab3b89b97b} 
+bool {\bfseries operator$>$} (const \mbox{\hyperlink{class_flower}{Flower}} \&other) const
+\begin{DoxyCompactList}\small\item\em "{}\+Greater than"{} operator based on key fields. \end{DoxyCompactList}\item 
+\Hypertarget{class_flower_af845d4d5700142ebeb670cc6bc116ce1}\label{class_flower_af845d4d5700142ebeb670cc6bc116ce1} 
+bool {\bfseries operator$<$} (const \mbox{\hyperlink{class_flower}{Flower}} \&other) const
+\begin{DoxyCompactList}\small\item\em "{}\+Less than"{} operator based on key fields. \end{DoxyCompactList}\item 
+\Hypertarget{class_flower_a05231051adbf69f1691431cea4a343ce}\label{class_flower_a05231051adbf69f1691431cea4a343ce} 
+bool {\bfseries operator$>$=} (const \mbox{\hyperlink{class_flower}{Flower}} \&other) const
+\begin{DoxyCompactList}\small\item\em "{}\+Greater than or equal to"{} operator based on key fields. \end{DoxyCompactList}\item 
+\Hypertarget{class_flower_ab6de0bb581e0092c5ef55018e50a060b}\label{class_flower_ab6de0bb581e0092c5ef55018e50a060b} 
+bool {\bfseries operator$<$=} (const \mbox{\hyperlink{class_flower}{Flower}} \&other) const
+\begin{DoxyCompactList}\small\item\em "{}\+Less than or equal to"{} operator based on key fields. \end{DoxyCompactList}\item 
+\Hypertarget{class_flower_abd369d748d0e66c7e466e60fbbd6d9c2}\label{class_flower_abd369d748d0e66c7e466e60fbbd6d9c2} 
+\mbox{\hyperlink{class_flower}{Flower}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_flower}{Flower}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy assignment operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_flower_a4ebbfd69e4d3022d85638f049dc167df}\index{Flower@{Flower}!EqFlowers@{EqFlowers}}
+\index{EqFlowers@{EqFlowers}!Flower@{Flower}}
+\doxysubsubsection{\texorpdfstring{EqFlowers()}{EqFlowers()}}
+{\footnotesize\ttfamily \label{class_flower_a4ebbfd69e4d3022d85638f049dc167df} 
+bool Flower\+::\+Eq\+Flowers (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_flower}{Flower}} \&}]{other}{}\end{DoxyParamCaption}) const}
+
+Compares the current object with another based on key fields.   
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Reference to another \doxylink{class_flower}{Flower} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if name, color, and smell match; otherwise false.
+\end{DoxyReturn}
+Two objects are considered "{}equal"{} if their name, color, and smell fields are the same. The regions field is ignored in this comparison.
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Reference to another \doxylink{class_flower}{Flower} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if name, color, and smell match; otherwise false.
+\end{DoxyReturn}
+Two objects are considered "{}equal"{} if their name, color, and smell fields are the same. The regions field is ignored in this comparison.
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{flower_8h}{flower.\+h}}\item 
+\mbox{\hyperlink{flower_8cpp}{flower.\+cpp}}\end{DoxyCompactItemize}

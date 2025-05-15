@@ -1,0 +1,93 @@
+\doxysection{sorts.\+h}
+\hypertarget{sorts_8h_source}{}\label{sorts_8h_source}\mbox{\hyperlink{sorts_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#ifndef\ SORTS\_H}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#define\ SORTS\_H}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sorts_8h_aebfde617379aba949d39718094944d44}{mySwap}}(T\&\ x,\ T\&\ y)\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ T\ temp\ =\ x;}
+\DoxyCodeLine{00012\ \ \ \ \ x\ =\ y;}
+\DoxyCodeLine{00013\ \ \ \ \ y\ =\ temp;}
+\DoxyCodeLine{00014\ \}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sorts_8h_a174b30343ad7070dd2246a986fb3fa98}{selectSort}}(T\ data[],\ \textcolor{keywordtype}{long}\ size)\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ T\ x;\ \textcolor{comment}{//\ min\ el}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{long}\ k;\ \textcolor{comment}{//\ his\ index}}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{long}\ i\ =\ 0;\ i\ <\ size\ -\/\ 1;\ ++i)\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ x\ =\ data[i];}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ k\ =\ i;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{long}\ j\ =\ i\ +\ 1;\ j\ <\ size;\ ++j)\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (data[j]\ <\ x)\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ k\ =\ j;}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ x\ =\ data[j];}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ data[k]\ =\ data[i];}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ data[i]\ =\ x;}
+\DoxyCodeLine{00035\ \ \ \ \ \}}
+\DoxyCodeLine{00036\ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sorts_8h_a7060f0ef801a4a84522056c801e4c099}{downHeap}}(T\ data[],\ \textcolor{keywordtype}{long}\ k,\ \textcolor{keywordtype}{long}\ n)\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ left\ =\ 2\ *\ k\ +\ 1;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ right\ =\ 2\ *\ k\ +\ 2;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ largest\ =\ k;}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (left\ <\ n\ \&\&\ data[left]\ >\ data[largest])\ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ largest\ =\ left;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (right\ <\ n\ \&\&\ data[right]\ >\ data[largest])\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ largest\ =\ right;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (largest\ ==\ k)\ \{\ \textcolor{keywordflow}{break};\ \}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{sorts_8h_aebfde617379aba949d39718094944d44}{mySwap}}(data[k],\ data[largest]);}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ k\ =\ largest;}
+\DoxyCodeLine{00061\ \ \ \ \ \}}
+\DoxyCodeLine{00062\ \}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00068\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sorts_8h_afc3fe6e0205450ef2e1914e322c8e59d}{heapSort}}(T\ data[],\ \textcolor{keywordtype}{long}\ size)\ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{long}\ i;}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordflow}{for}(i\ =\ size/2\ -\/\ 1;\ i\ >=\ 0;\ -\/-\/i)\ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{sorts_8h_a7060f0ef801a4a84522056c801e4c099}{downHeap}}(data,\ i,\ size\ -\/\ 1);}
+\DoxyCodeLine{00073\ \ \ \ \ \}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordflow}{for}(i\ =\ size\ -\/\ 1;\ i\ >\ 0;\ -\/-\/i)\ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{sorts_8h_aebfde617379aba949d39718094944d44}{mySwap}}(data[i],\ data[0]);}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{sorts_8h_a7060f0ef801a4a84522056c801e4c099}{downHeap}}(data,\ 0,\ i\ -\/\ 1);}
+\DoxyCodeLine{00078\ \ \ \ \ \}}
+\DoxyCodeLine{00079\ \}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00085\ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{sorts_8h_aff750706315028e5923b225d593e511c}{quickSort}}(T*\ data,\ \textcolor{keywordtype}{long}\ n)\ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{long}\ i\ =\ 0,\ j\ =\ n\ -\/\ 1;}
+\DoxyCodeLine{00087\ \ \ \ \ T\ p\ =\ data[n\ >>\ 1];}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordflow}{while}\ (i\ <=\ j)\ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (data[i]\ <\ p)\ \{\ i++;\ \}}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (data[j]\ >\ p)\ \{\ j-\/-\/;\ \}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ <=\ j)\ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{sorts_8h_aebfde617379aba949d39718094944d44}{mySwap}}(data[i],\ data[j]);}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ i++;}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ j-\/-\/;}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00098\ \ \ \ \ \}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ <\ n)\ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{sorts_8h_aff750706315028e5923b225d593e511c}{quickSort}}(data\ +\ i,\ n\ -\/\ i);}
+\DoxyCodeLine{00102\ \ \ \ \ \}}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordflow}{if}\ (j\ >\ 0)\ \{}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{sorts_8h_aff750706315028e5923b225d593e511c}{quickSort}}(data,\ j\ +\ 1);}
+\DoxyCodeLine{00106\ \ \ \ \ \}}
+\DoxyCodeLine{00107\ \}}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

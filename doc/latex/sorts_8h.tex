@@ -1,0 +1,115 @@
+\doxysection{sorts.\+h File Reference}
+\hypertarget{sorts_8h}{}\label{sorts_8h}\index{sorts.h@{sorts.h}}
+
+
+Implementation of various sorting algorithms (selection sort, heap sort, and quick sort), as well as the auxiliary function my\+Swap.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T$>$ }\\void \mbox{\hyperlink{sorts_8h_aebfde617379aba949d39718094944d44}{my\+Swap}} (T \&x, T \&y)
+\begin{DoxyCompactList}\small\item\em Auxiliary swap function. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T$>$ }\\void \mbox{\hyperlink{sorts_8h_a174b30343ad7070dd2246a986fb3fa98}{select\+Sort}} (T data\mbox{[}$\,$\mbox{]}, long size)
+\begin{DoxyCompactList}\small\item\em Selection Sort algorithm. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T$>$ }\\void \mbox{\hyperlink{sorts_8h_a7060f0ef801a4a84522056c801e4c099}{down\+Heap}} (T data\mbox{[}$\,$\mbox{]}, long k, long n)
+\begin{DoxyCompactList}\small\item\em "{}\+Heapify"{} operation for heap. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T$>$ }\\void \mbox{\hyperlink{sorts_8h_afc3fe6e0205450ef2e1914e322c8e59d}{heap\+Sort}} (T data\mbox{[}$\,$\mbox{]}, long size)
+\begin{DoxyCompactList}\small\item\em Heap Sort algorithm. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T$>$ }\\void \mbox{\hyperlink{sorts_8h_aff750706315028e5923b225d593e511c}{quick\+Sort}} (T \texorpdfstring{$\ast$}{*}data, long n)
+\begin{DoxyCompactList}\small\item\em Quick Sort algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{sorts_8h_a7060f0ef801a4a84522056c801e4c099}\index{sorts.h@{sorts.h}!downHeap@{downHeap}}
+\index{downHeap@{downHeap}!sorts.h@{sorts.h}}
+\doxysubsubsection{\texorpdfstring{downHeap()}{downHeap()}}
+{\footnotesize\ttfamily \label{sorts_8h_a7060f0ef801a4a84522056c801e4c099} 
+template$<$class T$>$ \\
+void down\+Heap (\begin{DoxyParamCaption}\item[{T}]{data}{\mbox{[}$\,$\mbox{]}, }\item[{long}]{k}{, }\item[{long}]{n}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Any type supporting \texorpdfstring{$>$}{>} operator. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Heap array with n elements. \\
+\hline
+{\em k} & Index of the root of the subheap. \\
+\hline
+{\em n} & Size of the array. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{sorts_8h_afc3fe6e0205450ef2e1914e322c8e59d}\index{sorts.h@{sorts.h}!heapSort@{heapSort}}
+\index{heapSort@{heapSort}!sorts.h@{sorts.h}}
+\doxysubsubsection{\texorpdfstring{heapSort()}{heapSort()}}
+{\footnotesize\ttfamily \label{sorts_8h_afc3fe6e0205450ef2e1914e322c8e59d} 
+template$<$class T$>$ \\
+void heap\+Sort (\begin{DoxyParamCaption}\item[{T}]{data}{\mbox{[}$\,$\mbox{]}, }\item[{long}]{size}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Any type supporting \texorpdfstring{$>$}{>} operator. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Array of size elements. \\
+\hline
+{\em size} & Number of elements. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{sorts_8h_aebfde617379aba949d39718094944d44}\index{sorts.h@{sorts.h}!mySwap@{mySwap}}
+\index{mySwap@{mySwap}!sorts.h@{sorts.h}}
+\doxysubsubsection{\texorpdfstring{mySwap()}{mySwap()}}
+{\footnotesize\ttfamily \label{sorts_8h_aebfde617379aba949d39718094944d44} 
+template$<$typename T$>$ \\
+void my\+Swap (\begin{DoxyParamCaption}\item[{T \&}]{x}{, }\item[{T \&}]{y}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & First array element. \\
+\hline
+{\em y} & Second array element. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{sorts_8h_aff750706315028e5923b225d593e511c}\index{sorts.h@{sorts.h}!quickSort@{quickSort}}
+\index{quickSort@{quickSort}!sorts.h@{sorts.h}}
+\doxysubsubsection{\texorpdfstring{quickSort()}{quickSort()}}
+{\footnotesize\ttfamily \label{sorts_8h_aff750706315028e5923b225d593e511c} 
+template$<$class T$>$ \\
+void quick\+Sort (\begin{DoxyParamCaption}\item[{T \texorpdfstring{$\ast$}{*}}]{data}{, }\item[{long}]{n}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Any type supporting \texorpdfstring{$<$}{<}, \texorpdfstring{$>$}{>} and assignment. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Pointer to the first element of the array. \\
+\hline
+{\em n} & Number of elements. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{sorts_8h_a174b30343ad7070dd2246a986fb3fa98}\index{sorts.h@{sorts.h}!selectSort@{selectSort}}
+\index{selectSort@{selectSort}!sorts.h@{sorts.h}}
+\doxysubsubsection{\texorpdfstring{selectSort()}{selectSort()}}
+{\footnotesize\ttfamily \label{sorts_8h_a174b30343ad7070dd2246a986fb3fa98} 
+template$<$class T$>$ \\
+void select\+Sort (\begin{DoxyParamCaption}\item[{T}]{data}{\mbox{[}$\,$\mbox{]}, }\item[{long}]{size}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Any type supporting \texorpdfstring{$<$}{<} and = operators. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Array of size elements. \\
+\hline
+{\em size} & Number of elements. \\
+\hline
+\end{DoxyParams}

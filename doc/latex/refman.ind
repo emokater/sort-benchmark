@@ -1,0 +1,63 @@
+\begin{theindex}
+
+  \item {downHeap}
+    \subitem {sorts.h}, \hyperpage{13}
+
+  \indexspace
+
+  \item {EqFlowers}
+    \subitem {Flower}, \hyperpage{6}
+
+  \indexspace
+
+  \item {Flower}, \hyperpage{5}
+    \subitem {EqFlowers}, \hyperpage{6}
+  \item {flower.cpp}, \hyperpage{7}
+  \item {flower.h}, \hyperpage{7}
+
+  \indexspace
+
+  \item {heapSort}
+    \subitem {sorts.h}, \hyperpage{14}
+
+  \indexspace
+
+  \item {io.cpp}, \hyperpage{8}
+    \subitem {parserCSV}, \hyperpage{8}
+    \subitem {saveRes}, \hyperpage{9}
+  \item {io.h}, \hyperpage{10}
+    \subitem {parserCSV}, \hyperpage{10}
+    \subitem {saveRes}, \hyperpage{11}
+
+  \indexspace
+
+  \item {main.cpp}, \hyperpage{12}
+  \item {mySwap}
+    \subitem {sorts.h}, \hyperpage{14}
+
+  \indexspace
+
+  \item {parserCSV}
+    \subitem {io.cpp}, \hyperpage{8}
+    \subitem {io.h}, \hyperpage{10}
+
+  \indexspace
+
+  \item {quickSort}
+    \subitem {sorts.h}, \hyperpage{14}
+
+  \indexspace
+
+  \item {saveRes}
+    \subitem {io.cpp}, \hyperpage{9}
+    \subitem {io.h}, \hyperpage{11}
+  \item {selectSort}
+    \subitem {sorts.h}, \hyperpage{15}
+  \item {sorts.h}, \hyperpage{13}
+    \subitem {downHeap}, \hyperpage{13}
+    \subitem {heapSort}, \hyperpage{14}
+    \subitem {mySwap}, \hyperpage{14}
+    \subitem {quickSort}, \hyperpage{14}
+    \subitem {selectSort}, \hyperpage{15}
+
+\end{theindex}
