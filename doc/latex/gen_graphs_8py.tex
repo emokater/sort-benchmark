@@ -1,0 +1,74 @@
+\doxysection{gen\+Graphs.\+py File Reference}
+\hypertarget{gen_graphs_8py}{}\label{gen_graphs_8py}\index{genGraphs.py@{genGraphs.py}}
+
+
+Parses timing data and plots performance of sorting algorithms.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{gen_graphs_8py_adfded9c013083cfaa191fd21f36243ce}{gen\+Graphs.\+parse\+\_\+timing\+\_\+file}} (filepath)
+\begin{DoxyCompactList}\small\item\em Read the timing log and fill the data dict. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{gen_graphs_8py_ac84282fa2959a6ef317da4fb1c47de25}{gen\+Graphs.\+plot\+All}} (df)
+\begin{DoxyCompactList}\small\item\em Plot sorting algorithms on one graph. \end{DoxyCompactList}\item 
+\Hypertarget{gen_graphs_8py_af9aef0251923d267f7322e0edc81d640}\label{gen_graphs_8py_af9aef0251923d267f7322e0edc81d640} 
+{\bfseries gen\+Graphs.\+plot\+Selection\+Sort} (\mbox{\hyperlink{gen_graphs_8py_aca704c8d1b889efee3a82233988f364e}{data}})
+\item 
+\Hypertarget{gen_graphs_8py_a858c0187b5d431becf84079f3e431ada}\label{gen_graphs_8py_a858c0187b5d431becf84079f3e431ada} 
+{\bfseries gen\+Graphs.\+plot\+Others} (\mbox{\hyperlink{gen_graphs_8py_aca704c8d1b889efee3a82233988f364e}{data}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+dict \mbox{\hyperlink{gen_graphs_8py_aca704c8d1b889efee3a82233988f364e}{gen\+Graphs.\+data}}
+\begin{DoxyCompactList}\small\item\em Container for parsed timing data. \end{DoxyCompactList}\item 
+\Hypertarget{gen_graphs_8py_af3b1a17a893f7657c38172b9d5862b14}\label{gen_graphs_8py_af3b1a17a893f7657c38172b9d5862b14} 
+{\bfseries gen\+Graphs.\+df} = pd.\+Data\+Frame(\mbox{\hyperlink{gen_graphs_8py_aca704c8d1b889efee3a82233988f364e}{data}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{gen_graphs_8py_adfded9c013083cfaa191fd21f36243ce}\index{genGraphs.py@{genGraphs.py}!parse\_timing\_file@{parse\_timing\_file}}
+\index{parse\_timing\_file@{parse\_timing\_file}!genGraphs.py@{genGraphs.py}}
+\doxysubsubsection{\texorpdfstring{parse\_timing\_file()}{parse\_timing\_file()}}
+{\footnotesize\ttfamily \label{gen_graphs_8py_adfded9c013083cfaa191fd21f36243ce} 
+gen\+Graphs.\+parse\+\_\+timing\+\_\+file (\begin{DoxyParamCaption}\item[{}]{filepath}{}\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}\details
+Opens the file at \p filepath, reads each line and:
+    - If it starts with 'Datasets', extracts dataset size.
+    - If it starts with '1', '2', '3' or '4', extracts the corresponding time.
+Populates and returns a dict with keys "Size", "Selection Sort", "Heap Sort", "Quick Sort", "Sort".
+\end{DoxyVerb}
+ \Hypertarget{gen_graphs_8py_ac84282fa2959a6ef317da4fb1c47de25}\index{genGraphs.py@{genGraphs.py}!plotAll@{plotAll}}
+\index{plotAll@{plotAll}!genGraphs.py@{genGraphs.py}}
+\doxysubsubsection{\texorpdfstring{plotAll()}{plotAll()}}
+{\footnotesize\ttfamily \label{gen_graphs_8py_ac84282fa2959a6ef317da4fb1c47de25} 
+gen\+Graphs.\+plot\+All (\begin{DoxyParamCaption}\item[{}]{df}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em df} & pandas Data\+Frame with timing data. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{gen_graphs_8py_aca704c8d1b889efee3a82233988f364e}\index{genGraphs.py@{genGraphs.py}!data@{data}}
+\index{data@{data}!genGraphs.py@{genGraphs.py}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily \label{gen_graphs_8py_aca704c8d1b889efee3a82233988f364e} 
+gen\+Graphs.\+data}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ \{}
+\DoxyCodeLine{00002\ \ \ \ \ \textcolor{stringliteral}{"{}Size"{}}:\ [],}
+\DoxyCodeLine{00003\ \ \ \ \ \textcolor{stringliteral}{"{}Selection\ Sort"{}}:\ [],}
+\DoxyCodeLine{00004\ \ \ \ \ \textcolor{stringliteral}{"{}Heap\ Sort"{}}:\ [],}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{stringliteral}{"{}Quick\ Sort"{}}:\ [],}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{stringliteral}{"{}Sort"{}}:\ []}
+\DoxyCodeLine{00007\ \}}
+
+\end{DoxyCode}

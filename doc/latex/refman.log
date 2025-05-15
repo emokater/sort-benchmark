@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.15)  15 MAY 2025 12:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.15)  15 MAY 2025 18:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -952,12 +952,7 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
 (Font)              Font shape `T1/pcr/m/sl' tried instead on input line 91.
 
-Underfull \hbox (badness 10000) detected at line 100
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 110
+Underfull \hbox (badness 10000) detected at line 98
 [][][]
  []
 
@@ -965,12 +960,7 @@ Underfull \hbox (badness 10000) detected at line 110
 
 [6]
 Chapter 4.
-(./flower_8cpp.tex) (./flower_8h.tex
-Underfull \hbox (badness 10000) in paragraph at lines 8--1
-
- []
-
-
+(./flower_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--10
 
  []
@@ -979,53 +969,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--10
 
 [7
 
-]) (./io_8cpp.tex
-Underfull \hbox (badness 10000) in paragraph at lines 8--14
-
- []
-
-
-
-[8]
-Underfull \hbox (badness 10000) detected at line 40
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 46--47
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 48--49
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 50--51
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 52--53
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 52--53
-
- []
-
-
-
-[9]) (./io_8h.tex
+]) (./io_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--11
 
  []
 
 
-
-[10]
 Underfull \hbox (badness 10000) detected at line 37
 [][][]
  []
@@ -1057,31 +1006,87 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--50
 
 
 
-[11]) (./io_8h_source.tex) (./main_8cpp.tex
+[8]
+
+[9]) (./io_8h_source.tex) (./sorts_8h.tex
+
+[10]
+
+[11]) (./sorts_8h_source.tex
+
+[12]) (./flower_8cpp.tex) (./io_8cpp.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--1
+
+ []
+
+
+
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 8--14
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 40
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
+
+ []
+
+
+
+[14]) (./main_8cpp.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--11
 
  []
 
 
 
-[12]) (./sorts_8h.tex
+[15]) (./gen_graphs_8py.tex
+Overfull \hbox (19.95619pt too wide) in paragraph at lines 42--42
+[]\T1/pcr/m/n/8 Populates and returns a dict with keys "Size", "Selection Sort"
+, "Heap Sort", "Quick Sort", "Sort".[] 
+ []
 
-[13]
 
-[14]) (./sorts_8h_source.tex
 
-[15])
+[16])
 
-[16] (./refman.ind
+[17]
+
+[18
+
+] (./refman.ind
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 22.39185pt on input line 1.
 
 
 
 
-[17
-
-
+[19
 
 
 ]) (./refman.aux)
@@ -1090,13 +1095,13 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 6E46F533DC1532E4FC29B98A8772246B;5328.
+(rerunfilecheck)             Checksum: 840AE4E35BD341D3F7D722C0BEAAE5CF;6527.
  ) 
 Here is how much of TeX's memory you used:
- 18383 strings out of 474142
- 296131 string characters out of 5742216
- 717311 words of memory out of 5000000
- 40949 multiletter control sequences out of 15000+600000
+ 18422 strings out of 474142
+ 297250 string characters out of 5742216
+ 717703 words of memory out of 5000000
+ 40969 multiletter control sequences out of 15000+600000
  615071 words of font info for 105 fonts, out of 8000000 for 9000
  735 hyphenation exceptions out of 8191
  101i,16n,117p,477b,751s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1112,10 +1117,10 @@ r/ucrro8a.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/urw/helvetic
 hvb8ac.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/urw/helvetic/uh
 vr8a.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/urw/helvetic/uhvr
 o8a.pfb>
-Output written on refman.pdf (21 pages, 139919 bytes).
+Output written on refman.pdf (23 pages, 145283 bytes).
 PDF statistics:
- 555 PDF objects out of 1000 (max. 8388607)
- 497 compressed objects within 5 object streams
- 136 named destinations out of 1000 (max. 500000)
- 257 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 621 PDF objects out of 1000 (max. 8388607)
+ 562 compressed objects within 6 object streams
+ 153 named destinations out of 1000 (max. 500000)
+ 305 words of extra memory for PDF output out of 10000 (max. 10000000)
 

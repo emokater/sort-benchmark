@@ -1,7 +1,9 @@
 \begin{theindex}
 
+  \item {data}
+    \subitem {genGraphs.py}, \hyperpage{17}
   \item {downHeap}
-    \subitem {sorts.h}, \hyperpage{13}
+    \subitem {sorts.h}, \hyperpage{11}
 
   \indexspace
 
@@ -12,52 +14,63 @@
 
   \item {Flower}, \hyperpage{5}
     \subitem {EqFlowers}, \hyperpage{6}
-  \item {flower.cpp}, \hyperpage{7}
+  \item {flower.cpp}, \hyperpage{13}
   \item {flower.h}, \hyperpage{7}
 
   \indexspace
 
-  \item {heapSort}
-    \subitem {sorts.h}, \hyperpage{14}
+  \item {genGraphs.py}, \hyperpage{16}
+    \subitem {data}, \hyperpage{17}
+    \subitem {parse\_timing\_file}, \hyperpage{16}
+    \subitem {plotAll}, \hyperpage{16}
 
   \indexspace
 
-  \item {io.cpp}, \hyperpage{8}
+  \item {heapSort}
+    \subitem {sorts.h}, \hyperpage{11}
+
+  \indexspace
+
+  \item {io.cpp}, \hyperpage{14}
+    \subitem {parserCSV}, \hyperpage{14}
+    \subitem {saveRes}, \hyperpage{14}
+  \item {io.h}, \hyperpage{8}, \hyperpage{10}
     \subitem {parserCSV}, \hyperpage{8}
     \subitem {saveRes}, \hyperpage{9}
-  \item {io.h}, \hyperpage{10}
-    \subitem {parserCSV}, \hyperpage{10}
-    \subitem {saveRes}, \hyperpage{11}
 
   \indexspace
 
-  \item {main.cpp}, \hyperpage{12}
+  \item {main.cpp}, \hyperpage{15}
   \item {mySwap}
-    \subitem {sorts.h}, \hyperpage{14}
+    \subitem {sorts.h}, \hyperpage{11}
 
   \indexspace
 
+  \item {parse\_timing\_file}
+    \subitem {genGraphs.py}, \hyperpage{16}
   \item {parserCSV}
-    \subitem {io.cpp}, \hyperpage{8}
-    \subitem {io.h}, \hyperpage{10}
+    \subitem {io.cpp}, \hyperpage{14}
+    \subitem {io.h}, \hyperpage{8}
+  \item {plotAll}
+    \subitem {genGraphs.py}, \hyperpage{16}
 
   \indexspace
 
   \item {quickSort}
-    \subitem {sorts.h}, \hyperpage{14}
+    \subitem {sorts.h}, \hyperpage{11}
 
   \indexspace
 
   \item {saveRes}
-    \subitem {io.cpp}, \hyperpage{9}
-    \subitem {io.h}, \hyperpage{11}
+    \subitem {io.cpp}, \hyperpage{14}
+    \subitem {io.h}, \hyperpage{9}
   \item {selectSort}
-    \subitem {sorts.h}, \hyperpage{15}
-  \item {sorts.h}, \hyperpage{13}
-    \subitem {downHeap}, \hyperpage{13}
-    \subitem {heapSort}, \hyperpage{14}
-    \subitem {mySwap}, \hyperpage{14}
-    \subitem {quickSort}, \hyperpage{14}
-    \subitem {selectSort}, \hyperpage{15}
+    \subitem {sorts.h}, \hyperpage{12}
+  \item {sorts.h}, \hyperpage{10}, \hyperpage{12}
+    \subitem {downHeap}, \hyperpage{11}
+    \subitem {heapSort}, \hyperpage{11}
+    \subitem {mySwap}, \hyperpage{11}
+    \subitem {quickSort}, \hyperpage{11}
+    \subitem {selectSort}, \hyperpage{12}
 
 \end{theindex}
