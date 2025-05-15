@@ -55,3 +55,35 @@ make full  # полная цепочка: генерация → сборка �
 ```
 make report
 ```
+
+## Памятка Doxygen 
+- Создать файл:
+  ``` Doxygen -g Doxyfile ```
+  
+- Какие поля изменяла:
+```
+PROJECT_NAME = ...
+PROJECT_BRIEF = ...
+
+INPUT = ../headers ../sources ../utils
+OUTPUT_DIRECTORY       = .
+
+RECURSIVE = YES
+FULL_PATH_NAMES = NO
+
+FILE_PATTERNS       = *.py *.cpp *.h
+EXTENSION_MAPPING   = py=Python
+OPTIMIZE_FOR_PYTHON = YES
+
+STRIP_FROM_PATH = /Users/ekaterinagridneva/Desktop/... # абсолютный путь до корня проекта
+
+REPEAT_BRIEF = NO
+```
+
+- Далее:
+```
+Doxygen Doxyfile 
+cd latex 
+make
+open refman.pdf
+```
